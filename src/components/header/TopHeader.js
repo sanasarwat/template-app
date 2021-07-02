@@ -28,11 +28,11 @@ export default function TopHeader() {
           "
         >
           <div className="all-catagory-option mobile-device">
-            <Link className="bar-btn">
+            <Link to="#" className="bar-btn">
               <i className="fas fa-bars"></i>
               <span className="ml-2 d-none d-md-inline">All Catagories</span>
             </Link>
-            <Link className="close-btn">
+            <Link to="#" className="close-btn">
               <i className="fas fa-times"></i>
               <span className="ml-2 d-none d-md-inline">All Catagories</span>
             </Link>
@@ -120,6 +120,7 @@ export default function TopHeader() {
                 <ul className="submenu">
                   <li>
                     <Link
+                      to="#"
                       onClick={() => {
                         history.push("/profile");
                       }}
@@ -133,7 +134,7 @@ export default function TopHeader() {
                 </ul>
               </li>
               <li className="signin-option">
-                <Link onClick={handleClickOpen}>
+                <Link to="#" onClick={handleClickOpen}>
                   <i className="fas fa-user mr-2"></i>Sign In
                 </Link>
               </li>
@@ -144,9 +145,9 @@ export default function TopHeader() {
 
       {/* <!-- admin Modal --> */}
       <div
-        class="modal fade"
+        className="modal fade"
         id="useradmin1"
-        tabindex="-1"
+        // tabindex="-1"
         aria-labelledby="useradmin1"
         aria-hidden="true"
       >

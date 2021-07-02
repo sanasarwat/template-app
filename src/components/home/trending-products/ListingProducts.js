@@ -83,7 +83,7 @@ export default function ListingProducts() {
           <div className="mlr-20">
             <div className="recommend-product-container">
               <div className="swiper-wrapper">
-                <Grid md={12} sm={12} lg={12} xs={12} spacing={13}>
+                <Grid item md={12} sm={12} lg={12} xs={12}>
                   <Slider {...settings}>
                     {products.map((product) => (
                       <Box key={product.id}>

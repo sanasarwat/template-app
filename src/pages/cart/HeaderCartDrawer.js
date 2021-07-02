@@ -3,10 +3,9 @@ import clsx from "clsx";
 import { CartContext } from "../../helpers/CartProvider";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
 import CartBar from "./CartBar";
-import { Link } from "react-router-dom";
+import { Typography, Button } from "@material-ui/core";
 
 const TAX_RATE = 0.07;
 
@@ -65,15 +64,30 @@ export default function HeaderCartDrawer() {
     <>
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Link onClick={toggleDrawer(anchor, true)}>
-            <span className="cart-icon">
+          <Button
+            style={{ backgroundColor: "white" }}
+            to="#"
+            onClick={toggleDrawer(anchor, true)}
+          >
+            <Typography component="span" className="cart-icon">
+              <i className="fas fa-shopping-cart"></i>
+              <Typography component="span" className="count">
+                {totalCartItems}
+              </Typography>
+            </Typography>
+            <Typography
+              component="span"
+              className="cart-amount ml-2"
+            >{`$ ${ccyFormat(invoiceTotal)}`}</Typography>
+
+            {/* <span className="cart-icon">
               <i className="fas fa-shopping-cart"></i>
               <span className="count">{totalCartItems}</span>
             </span>
             <span className="cart-amount">
               {`$ ${ccyFormat(invoiceTotal)}`}
-            </span>
-          </Link>
+            </span> */}
+          </Button>
 
           <Drawer
             anchor={anchor}

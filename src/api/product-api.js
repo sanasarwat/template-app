@@ -20,6 +20,7 @@ const getSearchData = (data, searchItem) => {
 //   });
 //   return fuse.search(searchString);
 // };
+
 const getFilterData = (
   data,
   selectedCategories,
@@ -45,6 +46,18 @@ const getFilterData = (
         .includes(selectedBrand.toLowerCase());
 
     return categoryMatch && ratingMatch && brandMatch;
+  });
+};
+
+const getMenuData = (data, selectedMenu) => {
+  return data.filter((product) => {
+    // console.log("hello" + data);
+    // category filter
+    let menuMatch = true;
+    if (selectedMenu && product.category)
+      menuMatch = selectedMenu === product.category;
+
+    return menuMatch;
   });
 };
 
@@ -75,6 +88,7 @@ export const getVisibleProducts = ({
   limit,
   sortBy,
   selectedBrand,
+  selectedMenu,
 }) => {
   let products = DBProducts;
 
@@ -87,6 +101,9 @@ export const getVisibleProducts = ({
       selectedRating,
       selectedBrand
     );
+
+  if (selectedMenu) products = getMenuData(products, selectedMenu);
+
   const total = products.length;
 
   //sort data call

@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Grid, Box } from "@material-ui/core";
+import { Grid, Box } from "@material-ui/core";
 import Rating from "@material-ui/lab/Rating";
 import * as TiIcons from "react-icons/ti";
 

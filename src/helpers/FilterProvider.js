@@ -4,48 +4,27 @@ import { createContext } from "react";
 export const FilterContext = createContext();
 
 export default function FilterProvider(props) {
-  const [selectedMenu, setSelectedMenu] = useState("");
-
-  const [selectedSearchItem, setSelecetdSearchItem] = useState("");
-  const [selectedCategory, setselectedCategory] = useState([]);
-
-  const [selectedBrand, setSelectedBrand] = useState([]);
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [searchItem, setSearchItem] = useState("");
   const [selectedRating, setSelectedRating] = useState("");
-
-  //search handler
-  function searchHandler(e) {
-    setSelecetdSearchItem(e.target.value);
-  }
-
-  //check handler
-  const onChangeCheckedHandler = (category, isChecked) => {
-    if (isChecked) {
-      setselectedCategory([...selectedCategory, category]);
-    } else
-      setselectedCategory(selectedCategory.filter((cat) => cat !== category));
-  };
-  //check handler
-  const onChangeBrandHandler = (brand, isChecked) => {
-    if (isChecked) {
-      setSelectedBrand([...selectedBrand, brand]);
-    } else setSelectedBrand(selectedBrand.filter((bran) => bran !== brand));
-  };
+  const [sortBy, setSortBy] = useState("");
+  const [selectedBrand, setSelectedBrand] = useState("");
+  const [selectedMenu, setSelectedMenu] = useState("");
 
   return (
     <FilterContext.Provider
       value={{
         ...props,
-        selectedSearchItem,
-        setSelecetdSearchItem,
-        selectedCategory,
-        setselectedCategory,
+        searchItem,
+        setSearchItem,
+        selectedCategories,
+        setSelectedCategories,
         selectedBrand,
         setSelectedBrand,
-        onChangeBrandHandler,
         selectedRating,
         setSelectedRating,
-        searchHandler,
-        onChangeCheckedHandler,
+        sortBy,
+        setSortBy,
         selectedMenu,
         setSelectedMenu,
       }}

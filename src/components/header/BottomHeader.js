@@ -1,22 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import HeaderCartDrawer from "../../pages/cart/HeaderCartDrawer";
-import { CartContext } from "../../helpers/CartProvider";
-import { Button, IconButton } from "@material-ui/core";
-import BottomNavigation from "@material-ui/core/BottomNavigation";
-import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-import MobileCartDrawer from "../../pages/cart/MobileCartDrawer";
-
-const TAX_RATE = 0.07;
-
-function ccyFormat(num) {
-  return `${num.toFixed(2)}`;
-}
+// import { CartContext } from "../../helpers/CartProvider";
 
 export default function BottomHeader() {
-  const { cartTotal, totalCartItems } = useContext(CartContext);
-  const invoiceTaxes = cartTotal * TAX_RATE;
-  const invoiceTotal = invoiceTaxes + cartTotal;
   //const [click, setClick] = useState(false);
   // const handleClick = () => {
   //   setClick(!click);
@@ -35,12 +22,12 @@ export default function BottomHeader() {
                 Catagories
               </Link> */}
 
-              <a class="bar-btn">
-                <i class="fas fa-bars"></i>All Catagories
-              </a>
-              <a class="close-btn">
-                <i class="fas fa-times"></i>All Catagories
-              </a>
+              <Link to="#" className="bar-btn">
+                <i className="fas fa-bars"></i>All Catagories
+              </Link>
+              <Link to="#" className="close-btn">
+                <i className="fas fa-times"></i>All Catagories
+              </Link>
             </div>
           </div>
           <div className="col-md-10">
@@ -59,288 +46,6 @@ export default function BottomHeader() {
                   <Link to="#">
                     Featured Products <i className="fas fa-angle-down"></i>
                   </Link>
-                  <div className="mega-menu-container">
-                    <div className="row m-0">
-                      <div className="col-lg-3">
-                        <div className="ctagory-item">
-                          <h6 className="title">Vegetables</h6>
-                          <ul>
-                            <li>
-                              <Link to="product-list.html">Artichoke.</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Aubergune(eggpiant)
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">Asparagus</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Broccoflower(a hyrbid)
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-lg-3">
-                        <div className="ctagory-item">
-                          <h6 className="title">Frouts</h6>
-                          <ul>
-                            <li>
-                              <Link to="product-list.html">Artichoke.</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Aubergune(eggpiant)
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">Asparagus</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Broccoflower(a hyrbid)
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-lg-3">
-                        <div className="ctagory-item">
-                          <h6 className="title">Salads</h6>
-                          <ul>
-                            <li>
-                              <Link to="product-list.html">Artichoke.</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Aubergune(eggpiant)
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">Asparagus</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Broccoflower(a hyrbid)
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-lg-3">
-                        <div className="ctagory-item">
-                          <h6 className="title">Health Care</h6>
-                          <ul>
-                            <li>
-                              <Link to="product-list.html">Artichoke.</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Aubergune(eggpiant)
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">Asparagus</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Broccoflower(a hyrbid)
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-lg-3">
-                        <div className="ctagory-item">
-                          <h6 className="title">Vegetables</h6>
-                          <ul>
-                            <li>
-                              <Link to="product-list.html">Artichoke.</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Aubergune(eggpiant)
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">Asparagus</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Broccoflower(a hyrbid)
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-lg-3">
-                        <div className="ctagory-item">
-                          <h6 className="title">Frouts</h6>
-                          <ul>
-                            <li>
-                              <Link to="product-list.html">Artichoke.</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Aubergune(eggpiant)
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">Asparagus</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Broccoflower(a hyrbid)
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-lg-3">
-                        <div className="ctagory-item">
-                          <h6 className="title">Salads</h6>
-                          <ul>
-                            <li>
-                              <Link to="product-list.html">Artichoke.</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Aubergune(eggpiant)
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">Asparagus</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Broccoflower(a hyrbid)
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-lg-3">
-                        <div className="ctagory-item">
-                          <h6 className="title">Health Care</h6>
-                          <ul>
-                            <li>
-                              <Link to="product-list.html">Artichoke.</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Aubergune(eggpiant)
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">Asparagus</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Broccoflower(a hyrbid)
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-lg-3">
-                        <div className="ctagory-item">
-                          <h6 className="title active">Fruits</h6>
-                          <ul>
-                            <li>
-                              <Link to="product-list.html">Artichoke.</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Aubergune(eggpiant)
-                              </Link>
-                            </li>
-                            <li>
-                              <Link className="active" to="product-list.html">
-                                Asparagus
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Broccoflower(a hyrbid)
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-lg-3">
-                        <div className="ctagory-item">
-                          <h6 className="title">Vegetables</h6>
-                          <ul>
-                            <li>
-                              <Link to="product-list.html">Artichoke.</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Aubergune(eggpiant)
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">Asparagus</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Broccoflower(a hyrbid)
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-lg-3">
-                        <div className="ctagory-item">
-                          <h6 className="title">Health Care</h6>
-                          <ul>
-                            <li>
-                              <Link to="product-list.html">Artichoke.</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Aubergune(eggpiant)
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">Asparagus</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Broccoflower(a hyrbid)
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-lg-3">
-                        <div className="ctagory-item">
-                          <h6 className="title">Fruits</h6>
-                          <ul>
-                            <li>
-                              <Link to="product-list.html">Artichoke.</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Aubergune(eggpiant)
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">Asparagus</Link>
-                            </li>
-                            <li>
-                              <Link to="product-list.html">
-                                Broccoflower(a hyrbid)
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </li>
 
                 <li className="item-has-children">
@@ -385,7 +90,7 @@ export default function BottomHeader() {
             to="#"
             className="d-flex align-items-center"
           >
-            <MobileCartDrawer />
+            <HeaderCartDrawer />
           </Link>
         </div>
 

@@ -7,7 +7,7 @@ export default function EditProfile() {
       <div
         className="profile-edit modal"
         id="edit-form1"
-        tabindex="-1"
+        // tabindex="-1"
         aria-labelledby="edit-form1"
         aria-hidden="true"
       >

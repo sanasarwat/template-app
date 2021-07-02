@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import CartProvider from "./helpers/CartProvider";
 import FilterProvider from "./helpers/FilterProvider";
 import WishProvider from "./helpers/WishProvider";
+//import moduleName from './connection'
 
 function App() {
   return (

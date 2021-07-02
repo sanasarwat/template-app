@@ -14,34 +14,34 @@ export default function CartSummary() {
 
   return (
     <div>
-      <div class="cart-footer">
-        <div class="cart-total">
+      <div className="cart-footer">
+        <div className="cart-total">
           <Link to="#">Do you have a voucher?</Link>
-          <p class="product-other-charge d-flex justify-content-between">
+          <p className="product-other-charge d-flex justify-content-between">
             <span>SubTotal</span>
             <span>{`${ccyFormat(cartTotal)}`}</span>
           </p>
-          <p class="discount d-flex justify-content-between">
+          <p className="discount d-flex justify-content-between">
             <span>Delevery charge</span>
             <span>$8.00</span>
           </p>
-          <p class="discount d-flex justify-content-between">
+          <p className="discount d-flex justify-content-between">
             <span>Vat Tax(7%)</span>
             <span>{`${ccyFormat(invoiceTaxes)}`}</span>
           </p>
-          <p class="discount d-flex justify-content-between">
+          <p className="discount d-flex justify-content-between">
             <span>Discount</span>
             <span>$8.00</span>
           </p>
-          <p class="saving d-flex justify-content-between">
+          <p className="saving d-flex justify-content-between">
             <span>Total Savings</span>
             <span>$11.00</span>
           </p>
-          <p class="total-price d-flex justify-content-between">
+          <p className="total-price d-flex justify-content-between">
             <span>Total</span>
             <span> {`${ccyFormat(invoiceTotal)}`}</span>
           </p>
-          <Link to="/checkout" class="procced-checkout">
+          <Link to="/checkout" className="procced-checkout">
             Prosecced Checkout
           </Link>
         </div>

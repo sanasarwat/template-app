@@ -62,34 +62,36 @@ export default function CategoryList() {
   };
   return (
     <div>
-      <section class="catagory-section">
-        <div class="container p-lg-0">
-          <div class="section-heading">
-            <h4 class="heading-title">
-              <span class="heading-circle green"></span> Products Catagories
+      <section className="catagory-section">
+        <div className="container p-lg-0">
+          <div className="section-heading">
+            <h4 className="heading-title">
+              <span className="heading-circle green"></span> Products Catagories
             </h4>
           </div>
 
-          <div class="section-wrapper">
+          <div className="section-wrapper">
             {/* <!-- Add Arrows --> */}
-            <div class="slider-btn-group">
-              <div class="slider-btn-prev catagory-slider-prev">
+            <div className="slider-btn-group">
+              <div className="slider-btn-prev catagory-slider-prev">
                 <ArrowBackIosIcon />
               </div>
-              <div class="slider-btn-next catagory-slider-next">
+              <div className="slider-btn-next catagory-slider-next">
                 <ArrowForwardIosIcon />
               </div>
             </div>
-            <div class="catagory-container">
-              <div class="swiper-wrapper">
-                <Grid md={12} sm={12} lg={12} xs={12} spacing={13}>
-                  <Slider {...settings}>
-                    {category.map((category) => (
-                      <Box key={category.id}>
-                        <CategoryCards category={category} />
-                      </Box>
-                    ))}
-                  </Slider>
+            <div className="catagory-container">
+              <div className="swiper-wrapper">
+                <Grid container>
+                  <Grid item md={12} sm={12} lg={12} xs={12}>
+                    <Slider {...settings}>
+                      {category.map((category) => (
+                        <Box key={category.id}>
+                          <CategoryCards category={category} />
+                        </Box>
+                      ))}
+                    </Slider>
+                  </Grid>
                 </Grid>
               </div>
             </div>

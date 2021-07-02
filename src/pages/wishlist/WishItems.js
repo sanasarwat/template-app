@@ -19,7 +19,7 @@ export default function WishItems() {
                   <i className="fas fa-times"></i>
                 </span>
                 <div className="thumb">
-                  <Link>
+                  <Link to="#">
                     <img
                       src="assets/images/products/cart/03.png"
                       alt="products"
@@ -27,7 +27,7 @@ export default function WishItems() {
                   </Link>
                 </div>
                 <div className="product-content">
-                  <Link to="product-detail.html" className="product-title">
+                  <Link to="/" className="product-title">
                     Daisy Cont Oil
                   </Link>
                   <div className="product-cart-info">1x 31b</div>

@@ -2,13 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function HeaderFilter(props) {
-  const {
-    setSelectedCategories,
-    selectedCategories,
-    selectedRating,
-    setSelectedRating,
-    setSelectedBrand,
-  } = props;
+  const { setSelectedCategories, setSelectedRating, setSelectedBrand } = props;
 
   // if (selectedCategories + (selectedRating ? 1 : 0) === 0) return null;
 

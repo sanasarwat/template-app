@@ -9,6 +9,7 @@ export default function NavBar() {
         <ul className="dashbord-nav d-lg-flex flex-wrap align-items-center justify-content-between">
           <li>
             <Link
+              to="#"
               onClick={() => {
                 history.push("/user-dashborad");
               }}
@@ -18,6 +19,7 @@ export default function NavBar() {
           </li>
           <li>
             <Link
+              to="#"
               className="active"
               onClick={() => {
                 history.push("/track-order");
@@ -28,6 +30,7 @@ export default function NavBar() {
           </li>
           <li>
             <Link
+              to="#"
               onClick={() => {
                 history.push("/profile");
               }}
@@ -37,6 +40,7 @@ export default function NavBar() {
           </li>
           <li>
             <Link
+              to="#"
               onClick={() => {
                 history.push("/wish-list");
               }}

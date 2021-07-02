@@ -21,7 +21,7 @@ export const products = [
       "Aromatic arabian rice with 6 pacs of hot shots with KFC famous vietnamese sauce",
     price: 270,
     category: "Fresh Friuts",
-    brand: "ABC",
+    brand: "LU",
     units: "4",
     rating: 1,
   },
@@ -57,7 +57,7 @@ export const products = [
     category: "Fresh Vegitables",
     brand: "LU",
     units: "8",
-    rating: 2,
+    rating: 5,
   },
 
   {
@@ -91,7 +91,7 @@ export const products = [
     category: "Fresh Vegitables",
     brand: "ABC",
     units: "6",
-    rating: 2,
+    rating: 4,
   },
 ];
 

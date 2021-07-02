@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import { Grid, Box, Paper, Typography } from "@material-ui/core";
+import { Grid, Box } from "@material-ui/core";
 
 export default function ListingProducts() {
   var settings = {
@@ -83,7 +83,7 @@ export default function ListingProducts() {
           <div className="mlr-20">
             <div className="recommend-product-container">
               <div className="swiper-wrapper">
-                <Grid md={12} sm={12} lg={12} xs={12} spacing={13}>
+                <Grid item md={12} sm={12} lg={12} xs={12}>
                   <Slider {...settings}>
                     {products.map((product) => (
                       <Box key={product.id}>

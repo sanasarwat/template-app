@@ -5,18 +5,18 @@ export default function SearchModel() {
     <div>
       {/* <!--search Modal --> */}
       <div
-        class="modal fade"
+        className="modal fade"
         id="search-select-id"
-        tabindex="-1"
+        // tabindex="-1"
         aria-labelledby="search-select-id"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body">
-              <div class="select-search-option">
-                <div class="flux-custom-select">
-                  <select class="wide nice-select">
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-body">
+              <div className="select-search-option">
+                <div className="flux-custom-select">
+                  <select className="wide nice-select">
                     <option value="0">Select Catagory</option>
                     <option value="1">Vegetables</option>
                     <option value="2">Fruits</option>
@@ -31,7 +31,7 @@ export default function SearchModel() {
                   </select>
                 </div>
 
-                <form action="#" class="search-form">
+                <form action="#" className="search-form">
                   <input
                     type="text"
                     name="search"
@@ -39,7 +39,7 @@ export default function SearchModel() {
                     style={{ marginTop: "20px" }}
                   />
                   <button
-                    class="submit-btn d-md"
+                    className="submit-btn d-md"
                     style={{
                       position: "absolute",
                       right: 0,
@@ -52,7 +52,7 @@ export default function SearchModel() {
                       lineHeight: "50px",
                     }}
                   >
-                    <i class="fas fa-search"></i>
+                    <i className="fas fa-search"></i>
                   </button>
                 </form>
               </div>

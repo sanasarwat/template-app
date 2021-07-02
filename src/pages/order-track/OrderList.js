@@ -11,7 +11,7 @@ export default function OrderList() {
         <div className="order-details-container d-none d-md-block">
           <div className="order-details-item d-sm-flex flex-wrap text-center text-sm-left align-items-center justify-content-between">
             <div className="thumb d-sm-flex flex-wrap align-items-center">
-              <Link>
+              <Link to="#">
                 <img
                   src="assets/images/products/cart/03.png"
                   alt="products"
@@ -38,7 +38,7 @@ export default function OrderList() {
 
           <div className="order-details-item d-sm-flex flex-wrap text-center text-sm-left align-items-center justify-content-between">
             <div className="thumb d-sm-flex flex-wrap align-items-center">
-              <Link>
+              <Link to="#">
                 <img
                   src="assets/images/products/cart/03.png"
                   to="#"
@@ -65,7 +65,7 @@ export default function OrderList() {
 
           <div className="order-details-item d-sm-flex text-center text-sm-left flex-wrap align-items-center justify-content-between">
             <div className="thumb d-sm-flex flex-wrap align-items-center">
-              <Link>
+              <Link to="#">
                 <img
                   src="assets/images/products/cart/03.png"
                   to="#"

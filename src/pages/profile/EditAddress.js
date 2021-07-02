@@ -6,7 +6,7 @@ export default function EditAddress() {
       <div
         className="modal fade address-edit-box"
         id="address-edit"
-        tabindex="-1"
+        // tabindex="-1"
         aria-labelledby="address-edit"
         aria-hidden="true"
       >

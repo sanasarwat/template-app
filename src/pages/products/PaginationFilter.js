@@ -1,42 +1,43 @@
 import React from "react";
 import Pagination from "@material-ui/lab/Pagination";
 import { Grid } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 export default function PaginationFilter() {
   const [page, setPage] = React.useState(1);
   return (
     <div>
-      <div class="col-12 pt--30">
-        <ul class="pagination justify-content-center justify-content-lg-end">
+      <div className="col-12 pt--30">
+        <ul className="pagination justify-content-center justify-content-lg-end">
           <li>
-            <a class="d-flex" href="#">
-              <i class="icon fas fa-angle-left"></i>
-              <span class="text">Prev</span>
-            </a>
+            <Link className="d-flex" to="#">
+              <i className="icon fas fa-angle-left"></i>
+              <span className="text">Prev</span>
+            </Link>
           </li>
-          <li class="d-none d-md-block">
-            <a href="#">1</a>
+          <li className="d-none d-md-block">
+            <Link to="#">1</Link>
           </li>
-          <li class="d-none d-md-block">
-            <a href="#">2</a>
+          <li className="d-none d-md-block">
+            <Link to="#">2</Link>
           </li>
-          <li class="d-none d-md-block">
-            <a class="active" href="#">
+          <li className="d-none d-md-block">
+            <Link className="active" to="#">
               3
-            </a>
+            </Link>
           </li>
-          <li class="d-none d-md-block">
-            <a href="#">4</a>
+          <li className="d-none d-md-block">
+            <Link to="#">4</Link>
           </li>
-          <li class="d-none d-md-block">
-            <a href="#">5</a>
+          <li className="d-none d-md-block">
+            <Link to="#">5</Link>
           </li>
           <li>
-            <a class="d-flex" href="#">
+            <Link className="d-flex" to="#">
               {" "}
-              <span class="text">Next</span>
-              <i class="icon fas fa-angle-right"></i>
-            </a>
+              <span className="text">Next</span>
+              <i className="icon fas fa-angle-right"></i>
+            </Link>
           </li>
         </ul>
       </div>

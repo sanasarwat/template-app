@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useHistory } from "react-router-dom";
+import { FilterContext } from "../../helpers/FilterProvider";
+import { category } from "../../data/category";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+
+import { Dropdown, Selection } from "react-dropdown-now";
+import "react-dropdown-now/style.css";
 
 export default function Banner() {
+  const { setSearchItem, selectedCategories, setSelectedCategories } =
+    useContext(FilterContext);
+  let history = useHistory();
+
   return (
     <div>
       {/* <!-- banner-section start --> */}
@@ -17,27 +30,53 @@ export default function Banner() {
               <div className="banner-search">
                 <div className="select-search-option d-md-flex">
                   <div className="flux-custom-select">
-                    <select class="wide">
-                      <option value="0">Select Catagory</option>
-                      <option value="1">Vegetables</option>
-                      <option value="2">Fruits</option>
-                      <option value="3">Salads</option>
-                      <option value="4">Fish & Seafood</option>
-                      <option value="5">Fresh Meat</option>
-                      <option value="6">Health Product</option>
-                      <option value="7">Butter & Eggs</option>
-                      <option value="8">Oils & Venegar</option>
-                      <option value="9">Frozen Food</option>
-                      <option value="10">Jam & Honey</option>
-                    </select>
+                    {/* <select
+                      value={selectedBrand}
+                      // onClick={() => {
+                      //   history.push("/collection");
+                      // }}
+                      onChange={handleBrand}
+                      className="wide"
+                    >
+                      {brands.map((item) => (
+                        <option key={item.id} value={item.title}>
+                          {item.title}
+                        </option>
+                      ))}
+                    </select> */}
+                    <FormControl>
+                      <Select
+                        className="wide"
+                        // labelId="sort-prods"
+                        value={selectedCategories}
+                        onChange={(e) => setSelectedCategories(e.target.value)}
+                        onClick={() => {
+                          history.push("/collection");
+                        }}
+                      >
+                        {category.map((item) => (
+                          <MenuItem key={item.id} value={item.title}>
+                            {item.title}
+                          </MenuItem>
+                        ))}
+                      </Select>
+                    </FormControl>
                   </div>
                   <form action="#" className="search-form">
                     <input
                       type="text"
                       name="search"
                       placeholder="Search for Products"
+                      onChange={(e) => {
+                        setSearchItem(e.target.value);
+                      }}
                     />
-                    <button className="submit-btn">
+                    <button
+                      className="submit-btn"
+                      onClick={() => {
+                        history.push("/collection");
+                      }}
+                    >
                       <i className="fas fa-search"></i>
                     </button>
                   </form>

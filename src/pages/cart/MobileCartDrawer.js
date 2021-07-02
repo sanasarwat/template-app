@@ -6,6 +6,7 @@ import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import CartBar from "./CartBar";
 import { Link } from "react-router-dom";
+import { Typography } from "@material-ui/core";
 
 const TAX_RATE = 0.07;
 
@@ -64,14 +65,17 @@ export default function MobileCartDrawer() {
     <>
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Link onClick={toggleDrawer(anchor, true)}>
-            <span className="cart-icon">
+          <Link to="#" onClick={toggleDrawer(anchor, true)}>
+            <Typography component="span" className="cart-icon">
               <i className="fas fa-shopping-cart"></i>
-              <span className="count">{totalCartItems}</span>
-            </span>
-            <span className="cart-amount ml-2">{`$ ${ccyFormat(
-              invoiceTotal
-            )}`}</span>
+              <Typography component="span" className="count">
+                {totalCartItems}
+              </Typography>
+            </Typography>
+            <Typography
+              component="span"
+              className="cart-amount ml-2"
+            >{`$ ${ccyFormat(invoiceTotal)}`}</Typography>
           </Link>
           <Drawer
             anchor={anchor}

@@ -9,13 +9,7 @@ function ccyFormat(num) {
 }
 
 export default function Summary() {
-  const {
-    cartItems,
-    cartTotal,
-    totalCartItems,
-    removeFromCart,
-    updateQuantity,
-  } = useContext(CartContext);
+  const { cartItems, cartTotal, updateQuantity } = useContext(CartContext);
 
   const invoiceTaxes = cartTotal * TAX_RATE;
   const invoiceTotal = invoiceTaxes + cartTotal;

@@ -8,7 +8,7 @@ export default function AdminModel() {
       <div
         className="modal fade"
         id="useradmin1"
-        tabindex="-1"
+        // tabindex="-1"
         aria-labelledby="useradmin1"
         aria-hidden="true"
       >
@@ -18,7 +18,7 @@ export default function AdminModel() {
               <div className="header-top-action-dropdown">
                 <ul>
                   <li className="signin-option">
-                    <Link data-dismiss="modal">
+                    <Link data-dismiss="modal" to="#">
                       <i className="fas fa-user mr-2"></i>Sign In
                     </Link>
                   </li>

@@ -10,15 +10,15 @@ export default function TrackOrderSingle() {
 
   return (
     <div>
-      <section class="dashboard-section">
-        <div class="container">
-          <div class="track-order-item bg-color-white">
-            <div class="track-order-head">
+      <section className="dashboard-section">
+        <div className="container">
+          <div className="track-order-item bg-color-white">
+            <div className="track-order-head">
               <h6>Track Order</h6>
             </div>
 
             <div
-              class="
+              className="
                   d-flex
                   justify-content-between
                   track-number-link
@@ -26,16 +26,16 @@ export default function TrackOrderSingle() {
                 "
             >
               <div>
-                <h6 class="order-number">Order#48376837</h6>
-                <p class="date">09/21/2020</p>
-                <p class="price">USD 2342</p>
+                <h6 className="order-number">Order#48376837</h6>
+                <p className="date">09/21/2020</p>
+                <p className="price">USD 2342</p>
               </div>
               <div>
                 <Link
                   onClick={() => {
                     history.push("/order-detail");
                   }}
-                  class="order-btn"
+                  className="order-btn"
                   to="#"
                 >
                   Order Details

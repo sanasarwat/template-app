@@ -16,7 +16,7 @@ export default function HeaderSection() {
       <MenuModel />
 
       {/* <!-- header section start --> */}
-      <header class="header">
+      <header className="header">
         <TopHeader />
         <hr />
         <BottomHeader />

@@ -5,25 +5,25 @@ export default function SiteModel() {
     <div>
       {/* <!--siteinfo Modal --> */}
       <div
-        class="modal fade"
+        className="modal fade"
         id="siteinfo1"
-        tabindex="-1"
+        // tabindex="-1"
         aria-labelledby="siteinfo1"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body">
-              <div class="header-top-action-dropdown">
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-body">
+              <div className="header-top-action-dropdown">
                 <ul>
-                  <li class="site-phone">
+                  <li className="site-phone">
                     <Link to="tel:000-000-000">
-                      <i class="fas fa-phone"></i> 000 000 000
+                      <i className="fas fa-phone"></i> 000 000 000
                     </Link>
                   </li>
-                  <li class="site-help">
+                  <li className="site-help">
                     <Link to="#">
-                      <i class="fas fa-question-circle"></i> Help & More
+                      <i className="fas fa-question-circle"></i> Help & More
                     </Link>
                   </li>
                 </ul>

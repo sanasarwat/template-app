@@ -14,7 +14,6 @@ import TrackOrderSingle from "./pages/order-track/TrackOrderSingle";
 import OrderDetail from "./pages/order-track/OrderDetail";
 import Profile from "./pages/profile";
 import Login from "./pages/athentication";
-import ABC from "./pages/abc/abc";
 
 function AppRoute() {
   return (
@@ -39,9 +38,7 @@ function AppRoute() {
           <Route exact path="/cart">
             <Cart />
           </Route>
-          <Route exact path="/abc">
-            <ABC />
-          </Route>
+
           <Route exact path="/checkout">
             <CheckOut />
           </Route>

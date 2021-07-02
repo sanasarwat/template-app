@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useMemo, useContext } from "react";
 import HeaderFilter from "./HeaderFilter";
 import CategoryFilter from "./CategoryFilter";
 import PriceFilter from "./PriceFilter";
@@ -14,13 +14,28 @@ import PaginationFilter from "./PaginationFilter";
 import SortFilter from "./SortFilter";
 import CartDrawer from "../cart/CartDrawer";
 //import { getProducts } from "../../data/products";
+import { FilterContext } from "../../helpers/FilterProvider";
 
 export default function Collections() {
-  const [selectedCategories, setSelectedCategories] = useState([]);
-  const [searchItem, setSearchItem] = useState("");
-  const [selectedRating, setSelectedRating] = useState("");
-  const [sortBy, setSortBy] = useState("");
-  const [selectedBrand, setSelectedBrand] = useState("");
+  // const [selectedCategories, setSelectedCategories] = useState([]);
+  // const [searchItem, setSearchItem] = useState("");
+  // const [selectedRating, setSelectedRating] = useState("");
+  // const [sortBy, setSortBy] = useState("");
+  // const [selectedBrand, setSelectedBrand] = useState("");
+
+  const {
+    selectedCategories,
+    setSelectedCategories,
+    searchItem,
+    setSearchItem,
+    selectedRating,
+    setSelectedRating,
+    sortBy,
+    setSortBy,
+    selectedBrand,
+    setSelectedBrand,
+    selectedMenu,
+  } = useContext(FilterContext);
 
   const { products } = useMemo(
     () =>
@@ -30,8 +45,16 @@ export default function Collections() {
         selectedRating,
         sortBy,
         selectedBrand,
+        selectedMenu,
       }),
-    [selectedCategories, searchItem, selectedRating, sortBy, selectedBrand]
+    [
+      selectedCategories,
+      searchItem,
+      selectedRating,
+      sortBy,
+      selectedBrand,
+      selectedMenu,
+    ]
   );
 
   return (
